@@ -1,0 +1,13 @@
+.nav {
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--color-2);
+}
+.mosque-icon {
+    display: flex;
+    font-size: 60px;
+}
