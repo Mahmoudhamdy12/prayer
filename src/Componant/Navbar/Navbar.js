@@ -1,5 +1,4 @@
 import { FaMosque } from "react-icons/fa6";
-
 import './Navbar.css'
 
 const Navbar = () => {

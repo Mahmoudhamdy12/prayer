@@ -1,7 +1,7 @@
 import { useState,useEffect} from 'react';
 import './Athan.css'
-// import getHours from './getHours'; 
 import axios from 'axios';
+import Hours from "./Hours"
 
 const Athan = () => {
   const [date,setDate] = useState()
@@ -49,41 +49,40 @@ const Athan = () => {
           break;
       }
     }
-    // const gethours = ()=> {
-    //   setInterval(() => {
-    //     const hours = new Date().getHours();
-    //     const minutes = new Date().getMinutes();
-    //     const seconds = new Date().getSeconds();
-    //       console.log(hours);
-    //       console.log(minutes);
-    //       console.log(seconds);
-    //       // return <>
-    //       //     <div>{hours} {minutes} {seconds} </div>
-    //       // </>
-    //   }, 1000);
-    // }
-    // gethours()
-
+//     const getHours = () => {
+//       setInterval(() => {
+//         const hours = new Date();
+//         // const minutes = new Date().getMinutes();
+//         // const seconds = new Date().getSeconds();
+//         // return (
+//           //     <div>{hours} {minutes} {seconds} </div>
+//           //         )
+//           console.log(getHours);
+//           // return hours
+//         }, 1000);
+// }
       if(timing){
           return (
             <div className='container'>
+              {/* <Hours/> */}
+              {/* <GetHours/> */}
                 <p className='info'>Prayer times in {city}, {country}</p>
                 <div className='date' >
                 {/* Hijri Date */}
                 <div className='parent parent-hijriDate' >
-                  <span>Hijri Date :</span>
+                  <span className='tex-hover' >Hijri Date :</span>
                  {date[2].map((x,index)=> <p key={index}>{x.date} </p>)}
                 </div>
                 {/* Gregorian Date */}
                 <div className='parent parent-gregorianDate' >
-                  <span>Gregorian Date :</span>
+                  <span className='tex-hover'>Gregorian Date :</span>
                  {date[3].map((x,index)=> <p key={index}> {x.date} </p>)}
                 </div>
                 </div>
                 <div className="option-parent">
                 {/* options country */}
                 <div className="option-Country">
-                  <p>Select an City</p>
+                  <span className='tex-hover'>Select an City : </span>
                   <select onChange={ handleClick } onClick={layoutHandleClick}>
                     <option value="Egypte">Egypte</option>
                     <option value="United Arab Emirates">United Arab Emirates</option>
@@ -93,6 +92,10 @@ const Athan = () => {
                   </select>
                 </div>
                  {/* {getHours} */}
+                 <div className='time-now'>
+                  <span className='tex-hover'>Time Now : </span>
+                  <Hours/>
+                 </div>
                 {/* timing-div */}
                 </div>
                 <div className='parent-timing' >

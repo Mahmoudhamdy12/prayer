@@ -21,27 +21,21 @@
     display: flex;
     gap: 5px;
 }
-.container .date .parent span{
-    color: var(--color-1);
-    font-size: 18px;
-    font-weight: 400;
-    border-bottom: solid 2px;
+.container .date .parent p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .option-parent {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 .option-parent .option-Country {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-}
-.option-parent .option-Country p {
-    color: var(--color-1);
-    font-size: 18px;
-    font-weight: 400;
-    border-bottom: solid 2px;
+    padding-bottom: 20px;
 }
 .option-parent .option-Country select {
     border: solid 1px;
@@ -64,7 +58,7 @@
     background-color: var(--color-1);
     border-radius: 7px;
     max-width: 700px;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
     color: var(--color-3);
 }
 .timing-list{
@@ -90,6 +84,36 @@
 }
 .timing-list li .payer {
     color: var(--color-4);
-    font-size: 18px;
-    
+    font-size: 18px;    
+}
+.time-now {
+    margin: auto;
+    width: fit-content;
+}
+.tex-hover{
+    color: var(--color-1);
+    position: relative;
+    cursor: pointer;
+}
+ 
+.tex-hover::after{
+    transition: .3s;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--color-1);
+
+}
+.tex-hover:hover::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--color-1);
+
 }
