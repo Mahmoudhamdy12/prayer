@@ -8,7 +8,6 @@ const Hours = () => {
       setInterval(() => {
         const hours = new Date();
         const interval = setTime(hours.toLocaleTimeString())
-        console.log(time);
         return () => clearInterval(interval);
       },1000);
     },[time])

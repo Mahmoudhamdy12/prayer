@@ -1,6 +1,7 @@
 .container {
     padding-left: 50px;
     padding-right: 50px;
+    height: calc(100vh - -150px);
 }
 .container .info {
     color:  var(--color-1);

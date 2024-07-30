@@ -25,42 +25,31 @@ const Athan = () => {
     },[city]);
     // handel func   
     const handleClick = (e)=> {
-      setCountry(e.target.value)
-      
-    }
-    const layoutHandleClick = ()=> {
-      switch (country) {
-        default:
-          setCity("");
+      const count = e.target.value
+      switch (count) {
         case "Egypte":
           setCity("Cairo");
+          setCountry("Egypte")
           break;
         case "United Arab Emirates":
           setCity("Abu Dhabi");
+          setCountry("United Arab Emirates")
           break;
         case "Saudi Arabia":
           setCity("Riyadh");
+          setCountry("Saudi Arabia")
           break;
         case "Kuwait":
           setCity("Kuwait");
+          setCountry("Kuwait")
           break;
         case "United Kingdom":
           setCity("London");
+          setCountry("United Kingdom")
           break;
+        }
       }
-    }
-//     const getHours = () => {
-//       setInterval(() => {
-//         const hours = new Date();
-//         // const minutes = new Date().getMinutes();
-//         // const seconds = new Date().getSeconds();
-//         // return (
-//           //     <div>{hours} {minutes} {seconds} </div>
-//           //         )
-//           console.log(getHours);
-//           // return hours
-//         }, 1000);
-// }
+
       if(timing){
           return (
             <div className='container'>
@@ -83,7 +72,7 @@ const Athan = () => {
                 {/* options country */}
                 <div className="option-Country">
                   <span className='tex-hover'>Select an City : </span>
-                  <select onChange={ handleClick } onClick={layoutHandleClick}>
+                  <select onChange={ handleClick } >
                     <option value="Egypte">Egypte</option>
                     <option value="United Arab Emirates">United Arab Emirates</option>
                     <option value="Saudi Arabia">Saudi Arabia</option>
