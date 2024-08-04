@@ -2,6 +2,7 @@ import { useState,useEffect} from 'react';
 import './Athan.css'
 import axios from 'axios';
 import Hours from "./Hours"
+import Loading from '../Loading/Loading';
 
 const Athan = () => {
   const [date,setDate] = useState()
@@ -104,6 +105,10 @@ const Athan = () => {
                   </div>
             </div>
     )
+        }else {
+          return (
+            <><Loading/></>
+          )
         }
 }
 
